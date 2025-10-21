@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS Variables for theming */
+:root {
+  /* Light mode colors */
+  --background: 255 255 255; /* White */
+  --foreground: 15 23 42; /* Dark slate */
+  --card: 248 250 252; /* Light gray */
+  --card-foreground: 15 23 42;
+  --border: 226 232 240; /* Light border */
+  --muted: 241 245 249; /* Muted background */
+  --muted-foreground: 100 116 139; /* Muted text */
+  --accent: 245 239 231; /* Beige accent */
+  --accent-foreground: 15 23 42;
+
+  /* Project color scheme */
+  --primary: 59 130 246; /* Professional Blue (#3B82F6) */
+  --secondary: 249 115 22; /* Warm Orange (#F97316) */
+  --success: 16 185 129; /* Pastel Green (#10B981) */
+}
+
+.dark {
+  /* Dark mode colors */
+  --background: 15 23 42; /* Dark slate */
+  --foreground: 248 250 252; /* Light gray */
+  --card: 30 41 59; /* Dark card */
+  --card-foreground: 248 250 252;
+  --border: 51 65 85; /* Dark border */
+  --muted: 30 41 59; /* Dark muted */
+  --muted-foreground: 148 163 184; /* Light muted text */
+  --accent: 51 65 85; /* Dark accent */
+  --accent-foreground: 248 250 252;
+
+  /* Project color scheme (same values work in both modes) */
+  --primary: 59 130 246; /* Professional Blue */
+  --secondary: 249 115 22; /* Warm Orange */
+  --success: 16 185 129; /* Pastel Green */
+}
+
+/* Smooth scroll behavior for better UX */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(var(--background));
+  color: rgb(var(--foreground));
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Smooth transitions for theme switching */
+* {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+/* Enhanced focus indicators for accessibility */
+*:focus-visible {
+  outline: 2px solid rgb(var(--primary));
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Ensure buttons and links have visible focus states */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid rgb(var(--primary));
+  outline-offset: 2px;
+}
