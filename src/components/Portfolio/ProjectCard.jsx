@@ -1,15 +1,26 @@
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, Github, Image as ImageIcon } from 'lucide-react';
 import { Button } from '../ui/button';
+import { useState } from 'react';
 
 export default function ProjectCard({ project }) {
+  const [imageError, setImageError] = useState(false);
+
   return (
     <div className="bg-white dark:bg-slate-800 rounded-lg shadow-md hover:shadow-xl transition-shadow overflow-hidden">
       {/* Project Image */}
-      <img
-        src={project.image}
-        alt={project.title}
-        className="w-full h-48 object-cover"
-      />
+      {imageError ? (
+        <div className="w-full h-48 bg-slate-200 dark:bg-slate-700 flex items-center justify-center">
+          <ImageIcon className="h-16 w-16 text-slate-400 dark:text-slate-500" />
+        </div>
+      ) : (
+        <img
+          src={project.image}
+          alt={project.title}
+          className="w-full h-48 object-cover"
+          onError={() => setImageError(true)}
+          loading="lazy"
+        />
+      )}
 
       {/* Card Content */}
       <div className="p-6">

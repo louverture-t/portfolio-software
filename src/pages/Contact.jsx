@@ -4,7 +4,7 @@ import Resume from '../components/Contact/Resume';
 
 export default function Contact() {
   return (
-    <div className="min-h-screen container mx-auto px-4 py-20">
+    <div className="min-h-screen bg-[#f1f5f9] dark:bg-slate-900 container mx-auto px-4 py-20">
       <div className="max-w-6xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900 dark:text-white">
           Get In Touch
