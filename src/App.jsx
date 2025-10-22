@@ -8,7 +8,7 @@ import NotFound from './pages/NotFound';
 
 function App() {
   return (
-    <BrowserRouter basename="/portfolio">
+    <BrowserRouter basename="/portfolio-software">
       <div className="flex flex-col min-h-screen bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 transition-colors">
         {/* Navigation */}
         <Navigation />

@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig(({ mode }) => ({
   plugins: [react()],
   // Use '/' for development, '/portfolio/' for production
-  base: mode === 'production' ? '/portfolio/' : '/',
+  base: mode === 'production' ? '/portfolio-software/' : '/',
   // Optimize asset handling
   assetsInclude: ['**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.gif', '**/*.svg'],
   build: {
