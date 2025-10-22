@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => ({
   plugins: [react()],
-  // Use '/' for development, '/portfolio/' for production
+  // Use '/' for development, '/portfolio-software/' for production to match repository name
   base: mode === 'production' ? '/portfolio-software/' : '/',
   // Optimize asset handling
   assetsInclude: ['**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.gif', '**/*.svg'],
